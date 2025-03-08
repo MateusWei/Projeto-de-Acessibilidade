@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Acessível</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="accessibility-bar">
+        <a href="#main-content">Ir para o conteúdo principal</a>
+        <div>
+            <button onclick="changeFontSize(2)">A+</button>
+            <button onclick="changeFontSize(-2)">A-</button>
+        </div>
+        
+    </div>
+    <header>
+        <h1>Página Principal</h1>
+    </header>
+    <div class="container">
+        <nav id="navegacao" role="navigation" aria-label="Navegação principal">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="#secao1">Receita de Bolo</a></li>
+                <li><a href="#secao2">Melhores praias do nordeste</a></li>
+                <li><a href="#secao3">Teste de Formulário</a></li>
+            </ul>
+        </nav>
+        <main id="main-content" role="main">
+            <section id="secao1">
+                <h2>Receita de Bolo</h2>
+                <div class="secao_info">
+                    <figure>
+                        <img src="assets/receita_bolo.webp" alt="Imagem de um bolo">
+                        <figcaption>Imagem de um bolo de laranja</figcaption>
+                    </figure>
+                    <p>Em um recipiente, bata a manteiga amolecida com leite por cerca de 3 minutos, até conseguir um aspecto parecido com a de um queijo cottage. Misture, em uma outra tigela, os ingredientes secos (farinha, açúcar, fermento e sal). Vá adicionando a mistura seca na massa de leite e manteiga aos poucos, batendo bem. No final, adicione as claras e misture tudo.
+
+                        Unte a fôrma de bolo e coloque a massa, levando ao forno preaquecido por cerca de 40 a 45 minutos, em fogo médio. Deixe esfriar por 10 minutinhos antes de tirar da forma e servir.</p>
+                </div>
+                <a href="#navegacao">Voltar à navegação</a>
+            </section>
+            <section id="secao2">
+                <h2>Melhores praias do nordeste</h2>
+                <div class="secao_info">
+                    <figure>
+                        <img src="assets/melhores_praias.webp" alt="Descubra as melhores praias do nordeste">
+                        <figcaption>Imagem de uma praia - Descubra as melhores praias do nordeste</figcaption>
+                    </figure>
+                    <p>Várias vezes eleita a praia mais bonita do Brasil e consequentemente uma das melhores praias do Nordeste, a Baía dos Sancho é mesmo impressionante. Com um mar cristalino, bastante árvores e falésias ao seu redor, o acesso à praia é feito através de uma escada, no meio de uma fenda nas falésias! A praia é maravilhosa e quando chove, tem até uma cachoeira escondida entre a mata ao redor. Leia mais no nosso Guia de Fernando de Noronha.</p>
+                </div>
+                <a href="#navegacao">Voltar à navegação</a>
+            </section>
+            <section id="secao3">
+                <h2>Teste de Formulário</h2>
+                <p>Este formulário serve para adicionar novas seções na página</p>
+                <form id="formulario" onsubmit="event.preventDefault(); adicionarSecao();" aria-labelledby="form-titulo">
+                    <fieldset>
+                        <legend id="form-titulo">Adicionar nova seção</legend>
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="titulo" name="titulo" required aria-describedby="titulo-ajuda">
+                        <small id="titulo-ajuda">Digite um título para a nova seção.</small>
+                        <br>
+                        <label for="descricao">Descrição:</label>
+                        <textarea id="descricao" name="descricao" required aria-describedby="descricao-ajuda"></textarea>
+                        <small id="descricao-ajuda">Digite uma descrição detalhada.</small>
+                        <br>
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+                <a href="#navegacao">Voltar à navegação</a>
+            </section>
+            <div id="conteudo-dinamico" aria-live="polite"></div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Página Acessível</p>
+    </footer>
+</body>
+</html>
