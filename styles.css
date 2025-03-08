@@ -1,7 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+
 header{
     background-color: #19882c;
     color: white;
     width: 100%;
+    padding-left: 10px;
 }
 
 body {
@@ -13,6 +18,14 @@ body {
     margin: 0;
     padding: 0;
 }
+footer{
+    background-color: #00420c;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -43,6 +56,10 @@ main {
     width: 100%;
     padding: 10px;
     background: #ddd;
+
+    & a{
+        align-self: center;
+    }
 }
 img {
     height: auto;
